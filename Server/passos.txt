@@ -1,0 +1,13 @@
+### Instalando ffmpeg
+Só por o repositório do ffmpeg para o ubuntu
+
+### Fazer o vídeo no formato FLV mantendo o codec h264
+ffmpeg -i fullhd.mp4 -c:v libx264 -f matroska h264.mkv
+ffmpeg -i fullhd.mp4 -c:v libx265 -f matroska h265.mkv
+
+### Levanta servidor
+ffserver -d -f ffserverOD.conf
+
+### Assistir no player
+ffplay http://localhost:8090/ondemand
+
